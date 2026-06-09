@@ -3,43 +3,38 @@ package com.sunilos.p4.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import com.mysql.cj.jdbc.JdbcConnection;
+import com.sunilos.p4.bean.ATMSystemBean;
 import com.sunilos.p4.bean.ProductBean;
-import com.sunilos.p4.bean.UserBean;
 import com.sunilos.p4.exception.ApplicationException;
 import com.sunilos.p4.exception.DuplicateRecordException;
 import com.sunilos.p4.util.JDBCDataSource;
 
-public class ProductModel extends BaseModel<ProductBean> {
+public class ATMSystemModel  extends BaseModel<ATMSystemBean> {
 
 	@Override
-	public ProductBean getBean() {
-		return new ProductBean();
-	}
-
-	@Override
-	public long add(ProductBean bean) throws ApplicationException, DuplicateRecordException {
+	public long add(ATMSystemBean bean) throws ApplicationException, DuplicateRecordException {
 		log.debug("Model add Started");
 		Connection conn = null;
 		int pk = 0;
-
-		ProductBean existbean = findByProductName(bean.getProductName());
-
-		if (existbean != null) {
-			throw new DuplicateRecordException("productName already exists");
+		
+		ATMSystemBean existbean = findByBankName(bean.getBankName());
+		
+		if(existbean != null) {
+			throw new DuplicateRecordException("bankName already exists");
 		}
-
+		
 		try {
 			conn = JDBCDataSource.getConnection();
 			pk = nextPK();
-			// Get auto-generated next primary key
 			System.out.println(pk + " in ModelJDBC");
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement("INSERT INTO " + getTable() + " VALUES(?,?,?,?,?,?,?,?,?)");
 			pstmt.setInt(1, pk);
-			pstmt.setString(2, bean.getProductName());
-			pstmt.setString(3, bean.getProductCategory());
-			pstmt.setDate(4, new java.sql.Date(bean.getOrderDate().getTime()));
-			pstmt.setInt(5, bean.getPrice());
+			pstmt.setString(2, bean.getBankName());
+			pstmt.setString(3, bean.getLocation());
+			pstmt.setString(4, bean.getCashAvailable());
+			pstmt.setInt(5, bean.getSecurityCode());
 			pstmt.setString(6, bean.getCreatedBy());
 			pstmt.setString(7, bean.getModifiedBy());
 			pstmt.setTimestamp(8, bean.getCreatedDatetime());
@@ -63,13 +58,16 @@ public class ProductModel extends BaseModel<ProductBean> {
 		log.debug("Model add End");
 		return pk;
 	}
+			
+	
 
+	
 	@Override
-	public void update(ProductBean bean) throws ApplicationException, DuplicateRecordException {
+	public void update(ATMSystemBean bean) throws ApplicationException, DuplicateRecordException {
 		log.debug("Model update Started");
 		Connection conn = null;
 
-		ProductBean beanExist = findByProductName(bean.getProductName());
+		ATMSystemBean beanExist = findByBankName(bean.getBankName());
 		// Check if updated LoginId already exist
 		if (beanExist != null && !(beanExist.getId() == bean.getId())) {
 			throw new DuplicateRecordException("ProductName is already exist");
@@ -79,11 +77,11 @@ public class ProductModel extends BaseModel<ProductBean> {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement(
-					"UPDATE " + getTable() + " PRODUCT_NAME=?,PRODUCT_CATEGORY=?,ORDER_DATE=?,PRICE=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
-			pstmt.setString(1, bean.getProductName());
-			pstmt.setString(2, bean.getProductCategory());
-			pstmt.setDate(3, new java.sql.Date(bean.getOrderDate().getTime()));
-			pstmt.setInt(4, bean.getPrice());
+					"UPDATE " + getTable() + " BANK_NAME=?,LOCATION=?,CASH_AVAILABLE=?,SECURITY_CODE=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
+			pstmt.setString(1, bean.getBankName());
+			pstmt.setString(2, bean.getLocation());
+			pstmt.setString(3, bean.getCashAvailable());
+			pstmt.setInt(4, bean.getSecurityCode());
 			pstmt.setString(5, bean.getCreatedBy());
 			pstmt.setString(6, bean.getModifiedBy());
 			pstmt.setTimestamp(7, bean.getCreatedDatetime());
@@ -107,30 +105,36 @@ public class ProductModel extends BaseModel<ProductBean> {
 		log.debug("Model update End");
 	}
 
-	@Override
-	public String getWhereClause(ProductBean bean) {
 
+	@Override
+	public String getWhereClause(ATMSystemBean bean) {
+		
 		StringBuffer sql = new StringBuffer();
 
 		if (bean != null) {
 			if (bean.getId() > 0) {
 				sql.append(" AND id = " + bean.getId());
 			}
-			if (bean.getProductName() != null && bean.getProductName().length() > 0) {
-				sql.append(" AND PRODUCT_NAME like '" + bean.getProductName() + "%'");
+			if (bean.getBankName() != null && bean.getBankName().length() > 0) {
+				sql.append(" AND BANK_NAME like '" + bean.getBankName() + "%'");
 			}
 		}
 
 		return sql.toString();
 	}
 
-	public ProductBean findByProductName(String productName) {
-		return findByUniqueColumn("PRODUCT_NAME", productName);
+	public ATMSystemBean findByBankName(String bankName) {
+		return findByUniqueColumn("BANK_NAME", bankName);
 	}
 
 	@Override
 	public String getTable() {
-		return "st_product";
+		return "st_atm";
+	}
+
+	@Override
+	public ATMSystemBean getBean() {
+		return new ATMSystemBean();
 	}
 
 }
