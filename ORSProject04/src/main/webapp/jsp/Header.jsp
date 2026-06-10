@@ -335,6 +335,23 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								class="bi bi-person-lines-fill me-2 text-primary"></i> ATMSystem
 								List
 						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
+						
+						<!-- Mobile -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-person-gear me-1"></i> Mobile
+							</h6>
+						</li>
+						<li><a class="dropdown-item" href="<%=ORSView.MOBILE_CTL%>">
+								<i class="bi bi-person-plus me-2 text-success"></i> Add Mobile
+						</a></li>
+						<li><a class="dropdown-item" href="#"> <i
+								class="bi bi-person-lines-fill me-2 text-primary"></i> Mobile
+								List
+						</a></li>
 
 					</ul></li>
 					
