@@ -57,8 +57,8 @@ public class ProductBean extends BaseBean {
 	public void setResultset(ResultSet rs) {
 		try {
 			super.setResultset(rs);
-			this.setProductName(rs.getNString("PRODUCT_NAME"));
-			this.setProductCategory(rs.getNString("PRODUCT_CATEGORY"));
+			this.setProductName(rs.getString("PRODUCT_NAME"));
+			this.setProductCategory(rs.getString("PRODUCT_CATEGORY"));
 			this.setOrderDate(rs.getDate("ORDER_DATE"));
 			this.setPrice(rs.getInt("PRICE"));
 

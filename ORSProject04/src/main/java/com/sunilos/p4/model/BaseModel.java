@@ -342,7 +342,6 @@ public abstract class BaseModel<T extends BaseBean> {
 	public abstract T getBean();
 
 	public void checkDuplicate(T bean) {
-		// TODO
 	}
 
 }

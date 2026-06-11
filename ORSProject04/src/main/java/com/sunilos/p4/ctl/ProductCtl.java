@@ -8,9 +8,10 @@ import com.sunilos.p4.util.PropertyReader;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
+
 @WebServlet("/ctl/ProductCtl")
-public class ProductCtl extends BaseCtl<ProductBean, ProductModel>{
-	
+public class ProductCtl extends BaseCtl<ProductBean, ProductModel> {
+
 	@Override
 	protected boolean validate(HttpServletRequest request) {
 
@@ -43,7 +44,7 @@ public class ProductCtl extends BaseCtl<ProductBean, ProductModel>{
 	protected ProductBean populateBean(HttpServletRequest request) {
 
 		ProductBean bean = new ProductBean();
-
+		bean.setId(DataUtility.getLong(request.getParameter("id")));
 		bean.setProductName(DataUtility.getString(request.getParameter("productName")));
 		bean.setProductCategory(DataUtility.getString(request.getParameter("productCategory")));
 		bean.setOrderDate(DataUtility.getDate(request.getParameter("orderDate")));
@@ -54,7 +55,6 @@ public class ProductCtl extends BaseCtl<ProductBean, ProductModel>{
 		return bean;
 	}
 
-
 	@Override
 	protected String getView() {
 		return ORSView.PRODUCT_VIEW;
@@ -63,7 +63,7 @@ public class ProductCtl extends BaseCtl<ProductBean, ProductModel>{
 	@Override
 	protected String getView(String op) {
 		if (OP_CANCEL.equalsIgnoreCase(op)) {
-			return ORSView.PRODUCT_CTL;
+			return ORSView.PRODUCT_LIST_CTL;
 		}
 		return ORSView.PRODUCT_VIEW;
 	}

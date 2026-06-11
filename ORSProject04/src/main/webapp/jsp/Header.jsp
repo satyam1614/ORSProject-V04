@@ -230,7 +230,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>">
 								<i class="bi bi-person-plus me-2 text-success"></i> Add Product
 						</a></li>
-						<li><a class="dropdown-item" href="#"> <i
+						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
 								class="bi bi-person-lines-fill me-2 text-primary"></i> Product
 								List
 						</a></li>
@@ -316,7 +316,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-people me-1"></i>Daily Modules
+						class="bi bi-backpack3-fill me-1"></i>Daily Modules
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -325,14 +325,14 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- ATMSystem -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-person-gear me-1"></i> ATMSystem
+								<i class="bi bi-bank me-1"></i> ATMSystem
 							</h6>
 						</li>
 						<li><a class="dropdown-item" href="<%=ORSView.ATMSYSTEM_CTL%>">
-								<i class="bi bi-person-plus me-2 text-success"></i> Add ATMSystem
+								<i class="bi bi-bank me-2 text-success"></i> Add ATMSystem
 						</a></li>
 						<li><a class="dropdown-item" href="#"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> ATMSystem
+								class="bi bi-bank me-2 text-primary"></i> ATMSystem
 								List
 						</a></li>
 						
@@ -342,14 +342,30 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- Mobile -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-person-gear me-1"></i> Mobile
+								<i class="bi bi-phone me-1"></i> Mobile
 							</h6>
 						</li>
 						<li><a class="dropdown-item" href="<%=ORSView.MOBILE_CTL%>">
-								<i class="bi bi-person-plus me-2 text-success"></i> Add Mobile
+								<i class="bi bi-phone me-2 text-success"></i> Add Mobile
 						</a></li>
 						<li><a class="dropdown-item" href="#"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> Mobile
+								class="bi bi-phone me-2 text-primary"></i> Mobile
+								List
+						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
+						<!-- Reward -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-trophy me-1"></i> Reward
+							</h6>
+						</li>
+						<li><a class="dropdown-item" href="<%=ORSView.REWARD_CTL%>">
+								<i class="bi bi-trophy me-2 text-success"></i> Add Reward
+						</a></li>
+						<li><a class="dropdown-item" href="#"> <i
+								class="bi bi-trophy me-2 text-primary"></i> Reward
 								List
 						</a></li>
 
