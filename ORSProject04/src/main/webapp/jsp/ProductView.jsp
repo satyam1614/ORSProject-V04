@@ -64,7 +64,7 @@ String _err = ServletUtility.getErrorMessage(request);
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Product Category <span
-						class="text-danger">*</span></label> <input type="text"
+						class="text  -danger">*</span></label> <input type="text"
 						name="productCategory" class="form-control" maxlength="200"
 						value="<%=DataUtility.getStringData(bean.getProductCategory())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("productCategory", request)%></div>

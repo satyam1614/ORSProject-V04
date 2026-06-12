@@ -101,5 +101,10 @@ public interface ORSView {
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
+	
+	public String DELIVERY_VIEW = PAGE_FOLDER + "/DeliveryView.jsp";
+	public String DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DeliveryListView.jsp";
+	public String DELIVERY_CTL = APP_CONTEXT + "/ctl/DeliveryCtl";
+	public String DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DeliveryListCtl";
 
 }

@@ -22,7 +22,7 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		</div>
 		<div>
 			<h1 class="fw-bold mb-1 fs-2">
-				Welcome<%
+				Welcome	<%
 			if (loggedIn) {
 			%>,
 				<%=firstName%>!<%
