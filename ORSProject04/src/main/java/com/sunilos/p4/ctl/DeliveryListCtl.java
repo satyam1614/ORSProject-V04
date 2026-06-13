@@ -27,7 +27,7 @@ public class DeliveryListCtl extends BaseListCtl<DeliveryBean, DeliveryModel> {
 
 	@Override
 	protected String getView() {
-		return ORSView.DELIVERY_LIST_VIEW;
+		return ORSView.DELIVERY_VIEW;
 	}
 
 	@Override

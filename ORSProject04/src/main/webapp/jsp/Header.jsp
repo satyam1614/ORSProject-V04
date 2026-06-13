@@ -331,7 +331,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item" href="<%=ORSView.ATMSYSTEM_CTL%>">
 								<i class="bi bi-bank me-2 text-success"></i> Add ATMSystem
 						</a></li>
-						<li><a class="dropdown-item" href="#"> <i
+						<li><a class="dropdown-item" href="<%=ORSView.ATMSYSTEM_LIST_CTL%>"> <i
 								class="bi bi-bank me-2 text-primary"></i> ATMSystem
 								List
 						</a></li>

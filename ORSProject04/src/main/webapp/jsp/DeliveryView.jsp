@@ -56,29 +56,29 @@ String _err = ServletUtility.getErrorMessage(request);
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Delivery Boy Name <span
-						class="text-danger">*</span></label> <input type="text" name="deliveryBoyName"
-						class="form-control" maxlength="100"
+						class="text-danger">*</span></label> <input type="text"
+						name="deliveryBoyName" class="form-control" maxlength="100"
 						value="<%=DataUtility.getStringData(bean.getDeliveryBoyName())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("deliveryBoyName", request)%></div>
 				</div>
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Address <span
-						class="text-danger">*</span></label> <input type="text"
-						name="address" class="form-control" maxlength="200"
+						class="text-danger">*</span></label> <input type="text" name="address"
+						class="form-control" maxlength="200"
 						value="<%=DataUtility.getStringData(bean.getAddress())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("address", request)%></div>
 				</div>
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Delivery Date <span
-						class="text-danger">*</span></label> <input type="text" name="deliveryDate"
-						id="udate" readonly="readonly" class="form-control"
-						maxlength="200"
+						class="text-danger">*</span></label> <input type="text"
+						name="deliveryDate" id="udatee" readonly="readonly"
+						class="form-control" maxlength="200"
 						value="<%=DataUtility.getDateString(bean.getDeliveryDate())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("deliveryDate", request)%></div>
 				</div>
-				
+
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Status <span
 						class="text-danger">*</span></label> <input type="text" name="status"
@@ -92,6 +92,11 @@ String _err = ServletUtility.getErrorMessage(request);
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
 					</button>
+					
+					<a href="<%=ORSView.DELIVERY_LIST_CTL%>"
+						class="btn btn-secondary ms-auto"> <i
+						class="bi bi-x-circle me-1"></i> Cancel
+					</a>
 				</div>
 			</form>
 		</div>

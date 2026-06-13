@@ -85,7 +85,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			<div
 				class="alert alert-success alert-dismissible fade show py-2 mx-3 mt-3"
 				role="alert">
-				<i class="bi bi-exclamation-triangle-fill me-2"></i>
+				<i class="bi bi-check-circle-fill me-2"></i>
 				<%=_suc%>
 
 				<button type="button" class="btn-close" data-bs-dismiss="alert"

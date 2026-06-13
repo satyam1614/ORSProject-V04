@@ -196,7 +196,7 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("CollegeCtl Method doGet Started");
+		log.debug("Do Post Method Started");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 

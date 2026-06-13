@@ -49,6 +49,7 @@ public class ATMSystemCtl extends BaseCtl<ATMSystemBean, ATMSystemModel> {
 
 		ATMSystemBean bean = new ATMSystemBean();
 
+		bean.setId(DataUtility.getLong(request.getParameter("id")));
 		bean.setBankName(DataUtility.getString(request.getParameter("bankName")));
 		bean.setLocation(DataUtility.getString(request.getParameter("location")));
 		bean.setCashAvailable(DataUtility.getString(request.getParameter("cashAvailable")));

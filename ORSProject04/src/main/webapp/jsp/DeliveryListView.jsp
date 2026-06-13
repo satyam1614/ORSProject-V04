@@ -12,6 +12,7 @@ int index = ((pageNo - 1) * pageSize) + 1;
 List list = ServletUtility.getList(request);
 Iterator<DeliveryBean> it = list.iterator();
 String _err = ServletUtility.getErrorMessage(request);
+String _suc = ServletUtility.getSuccessMessage(request);
 %>
 
 <div class="container-fluid px-4 py-4" style="max-width: 900px;">
@@ -47,7 +48,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					class="form-control form-control-sm" style="max-width: 220px;"
 					placeholder="Search by Delivery Boy Name"
 					value="<%=ServletUtility.getParameter("productName", request)%>">
-				
+
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> Search
@@ -55,7 +56,7 @@ String _err = ServletUtility.getErrorMessage(request);
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto"
-					>
+					onclick="return confirm('Delete this Delivery?')">
 					<i class="bi bi-trash me-1"></i> Delete Selected
 				</button>
 			</div>
@@ -65,6 +66,21 @@ String _err = ServletUtility.getErrorMessage(request);
 			%>
 			<div class="alert alert-danger py-2 mx-3 mt-3">
 				<i class="bi bi-exclamation-triangle-fill me-2"></i><%=_err%></div>
+			<%
+			}
+			%>
+			<%
+			if (_suc != null && !_suc.isEmpty()) {
+			%>
+			<div
+				class="alert alert-success alert-dismissible fade show py-2 mx-3 mt-3"
+				role="alert">
+				<i class="bi bi-check-circle-fill me-2"></i>
+				<%=_suc%>
+
+				<button type="button" class="btn-close" data-bs-dismiss="alert"
+					aria-label="Close"></button>
+			</div>
 			<%
 			}
 			%>

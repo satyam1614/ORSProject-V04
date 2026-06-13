@@ -77,7 +77,7 @@ public class ATMSystemModel  extends BaseModel<ATMSystemBean> {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement(
-					"UPDATE " + getTable() + " BANK_NAME=?,LOCATION=?,CASH_AVAILABLE=?,SECURITY_CODE=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
+					"UPDATE " + getTable() + " SET BANK_NAME=?,LOCATION=?,CASH_AVAILABLE=?,SECURITY_CODE=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
 			pstmt.setString(1, bean.getBankName());
 			pstmt.setString(2, bean.getLocation());
 			pstmt.setString(3, bean.getCashAvailable());

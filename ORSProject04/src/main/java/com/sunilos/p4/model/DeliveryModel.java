@@ -113,7 +113,7 @@ public class DeliveryModel extends BaseModel<DeliveryBean> {
 				sql.append(" AND id = " + bean.getId());
 			}
 			if (bean.getDeliveryBoyName() != null && bean.getDeliveryBoyName().length() > 0) {
-				sql.append(" AND DELIVERY_BOY_NAME like '" + bean.getDeliveryBoyName() + "%'");
+				sql.append(" AND delivery_boy_name like '" + bean.getDeliveryBoyName() + "%'");
 			}
 		}
 

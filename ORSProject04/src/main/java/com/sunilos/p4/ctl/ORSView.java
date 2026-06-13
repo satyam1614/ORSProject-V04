@@ -41,7 +41,6 @@ public interface ORSView {
 	public String MY_PROFILE_VIEW = PAGE_FOLDER + "/MyProfileView.jsp";
 	public String FORGET_PASSWORD_VIEW = PAGE_FOLDER + "/ForgetPasswordView.jsp";
 	public String MARKSHEET_MERIT_LIST_VIEW = PAGE_FOLDER + "/MarksheetMeritListView.jsp";
-	public String ATMSYSTEM_VIEW = PAGE_FOLDER + "/ATMSystemView.jsp";
 	public String MOBILE_VIEW = PAGE_FOLDER + "/MobileView.jsp";
 	public String REWARD_VIEW = PAGE_FOLDER + "/RewardView.jsp";
 	
@@ -84,7 +83,7 @@ public interface ORSView {
 	public String SUBJECT_REPORT_CTL = APP_CONTEXT + "/ctl/SubjectReportCtl";
 	public String MARKSHEET_REPORT_CTL = APP_CONTEXT + "/ctl/MarksheetReportCtl";
 	public String FACULTY_REPORT_CTL = APP_CONTEXT + "/ctl/FacultyReportCtl";
-	public String ATMSYSTEM_CTL = APP_CONTEXT + "/ctl/ATMSystemCtl";
+	
 	public String MOBILE_CTL = APP_CONTEXT + "/ctl/MobileCtl";
 	public String REWARD_CTL = APP_CONTEXT + "/ctl/RewardCtl";
 
@@ -106,5 +105,10 @@ public interface ORSView {
 	public String DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DeliveryListView.jsp";
 	public String DELIVERY_CTL = APP_CONTEXT + "/ctl/DeliveryCtl";
 	public String DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DeliveryListCtl";
+	
+	public String ATMSYSTEM_VIEW = PAGE_FOLDER + "/ATMSystemView.jsp";
+	public String ATMSYSTEM_LIST_VIEW = PAGE_FOLDER + "/ATMSystemListView.jsp";
+	public String ATMSYSTEM_CTL = APP_CONTEXT + "/ctl/ATMSystemCtl";
+	public String ATMSYSTEM_LIST_CTL = APP_CONTEXT + "/ctl/ATMSystemListCtl";
 
 }
