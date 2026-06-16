@@ -319,7 +319,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						class="bi bi-backpack3-fill me-1"></i>Daily Modules
 				</a>
 					<ul
-						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
+						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 custom-scroll-menu"
 						style="min-width: 210px; background: #1a2e4a;">
 
 						<!-- ATMSystem -->
@@ -384,10 +384,25 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								class="bi bi-trophy me-2 text-primary"></i> Delivery
 								List
 						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
+						<!-- Book -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-trophy me-1"></i> Book
+							</h6>
+						</li>
+						<li><a class="dropdown-item" href="<%=ORSView.BOOK_CTL%>">
+								<i class="bi bi-trophy me-2 text-success"></i> Add Book
+						</a></li>
+						<li><a class="dropdown-item" href="<%=ORSView.BOOK_LIST_CTL%>"> <i
+								class="bi bi-trophy me-2 text-primary"></i> Book
+								List
+						</a></li>
+						
 
 					</ul></li>
-					
-					
 					
 				<%
 				}

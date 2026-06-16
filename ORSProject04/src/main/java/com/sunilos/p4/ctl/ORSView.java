@@ -110,5 +110,11 @@ public interface ORSView {
 	public String ATMSYSTEM_LIST_VIEW = PAGE_FOLDER + "/ATMSystemListView.jsp";
 	public String ATMSYSTEM_CTL = APP_CONTEXT + "/ctl/ATMSystemCtl";
 	public String ATMSYSTEM_LIST_CTL = APP_CONTEXT + "/ctl/ATMSystemListCtl";
+	
+	public String BOOK_VIEW = PAGE_FOLDER + "/BookView.jsp";
+	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
+	public String BOOK_CTL = APP_CONTEXT + "/ctl/BookCtl";
+	public String BOOK_LIST_CTL = APP_CONTEXT + "/ctl/BookListCtl";
+
 
 }

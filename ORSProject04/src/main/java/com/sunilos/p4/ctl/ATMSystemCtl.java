@@ -1,7 +1,6 @@
 package com.sunilos.p4.ctl;
 
 import com.sunilos.p4.bean.ATMSystemBean;
-import com.sunilos.p4.bean.ProductBean;
 import com.sunilos.p4.model.ATMSystemModel;
 import com.sunilos.p4.util.DataUtility;
 import com.sunilos.p4.util.DataValidator;
