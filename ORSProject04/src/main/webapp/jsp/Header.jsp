@@ -153,8 +153,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						class="bi bi-people me-1"></i> People
 				</a>
 					<ul
-						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
-						style="min-width: 210px; background: #1a2e4a;">
+						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-auto"
+						style="min-width: 210px; max-height: 400px; background: #1a2e4a;">
 
 						<!-- Students -->
 						<li>
@@ -230,7 +230,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>">
 								<i class="bi bi-person-plus me-2 text-success"></i> Add Product
 						</a></li>
-						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
 								class="bi bi-person-lines-fill me-2 text-primary"></i> Product
 								List
 						</a></li>
@@ -311,16 +312,17 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 					</ul></li>
-					
-					<!-- ---- Modules: ATMSystem  (Admin only) ---- -->
+
+				<!-- ---- Modules: --------------->
+				<!-- ----------- -- ATMSystem  (Admin only) ---- -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
 						class="bi bi-backpack3-fill me-1"></i>Daily Modules
 				</a>
 					<ul
-						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 custom-scroll-menu"
-						style="min-width: 210px; background: #1a2e4a;">
+						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-y-auto"
+						style="max-height: 400px;">
 
 						<!-- ATMSystem -->
 						<li>
@@ -328,17 +330,18 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-bank me-1"></i> ATMSystem
 							</h6>
 						</li>
-						<li><a class="dropdown-item" href="<%=ORSView.ATMSYSTEM_CTL%>">
-								<i class="bi bi-bank me-2 text-success"></i> Add ATMSystem
+						<li><a class="dropdown-item"
+							href="<%=ORSView.ATMSYSTEM_CTL%>"> <i
+								class="bi bi-bank me-2 text-success"></i> Add ATMSystem
 						</a></li>
-						<li><a class="dropdown-item" href="<%=ORSView.ATMSYSTEM_LIST_CTL%>"> <i
-								class="bi bi-bank me-2 text-primary"></i> ATMSystem
-								List
+						<li><a class="dropdown-item"
+							href="<%=ORSView.ATMSYSTEM_LIST_CTL%>"> <i
+								class="bi bi-bank me-2 text-primary"></i> ATMSystem List
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
-						
+
+
 						<!-- Mobile -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -349,12 +352,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-phone me-2 text-success"></i> Add Mobile
 						</a></li>
 						<li><a class="dropdown-item" href="#"> <i
-								class="bi bi-phone me-2 text-primary"></i> Mobile
-								List
+								class="bi bi-phone me-2 text-primary"></i> Mobile List
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 						<!-- Reward -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -365,45 +367,61 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-trophy me-2 text-success"></i> Add Reward
 						</a></li>
 						<li><a class="dropdown-item" href="#"> <i
-								class="bi bi-trophy me-2 text-primary"></i> Reward
-								List
+								class="bi bi-trophy me-2 text-primary"></i> Reward List
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 						<!-- Delivery -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-trophy me-1"></i> Delivery
+								<i class="bi bi-truck me-1"></i> Delivery
 							</h6>
 						</li>
 						<li><a class="dropdown-item" href="<%=ORSView.DELIVERY_CTL%>">
-								<i class="bi bi-trophy me-2 text-success"></i> Add Delivery
+								<i class="bi bi-truck me-2 text-success"></i> Add Delivery
 						</a></li>
-						<li><a class="dropdown-item" href="<%=ORSView.DELIVERY_LIST_CTL%>"> <i
-								class="bi bi-trophy me-2 text-primary"></i> Delivery
-								List
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DELIVERY_LIST_CTL%>"> <i
+								class="bi bi-truck me-2 text-primary"></i> Delivery List
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 						<!-- Book -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-trophy me-1"></i> Book
+								<i class="bi bi-book me-1"></i> Book
 							</h6>
 						</li>
 						<li><a class="dropdown-item" href="<%=ORSView.BOOK_CTL%>">
-								<i class="bi bi-trophy me-2 text-success"></i> Add Book
+								<i class="bi bi-book me-2 text-success"></i> Add Book
 						</a></li>
-						<li><a class="dropdown-item" href="<%=ORSView.BOOK_LIST_CTL%>"> <i
-								class="bi bi-trophy me-2 text-primary"></i> Book
-								List
+						<li><a class="dropdown-item"
+							href="<%=ORSView.BOOK_LIST_CTL%>"> <i
+								class="bi bi-book me-2 text-primary"></i> Book List
 						</a></li>
-						
 
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- Description -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-file-earmark-text me-1"></i> Description
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DESCRIPTION_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-success"></i> Add
+								Description
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DESCRIPTION_LIST_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-primary"></i>
+								Description List
+						</a></li>
 					</ul></li>
-					
+
 				<%
 				}
 				%>
@@ -488,8 +506,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-box-arrow-right me-2"></i> Logout
 						</a></li>
 					</ul></li>
-					
-					
+
+
 
 				<%
 				} else {

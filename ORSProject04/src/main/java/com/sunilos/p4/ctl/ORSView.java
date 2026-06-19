@@ -115,6 +115,12 @@ public interface ORSView {
 	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
 	public String BOOK_CTL = APP_CONTEXT + "/ctl/BookCtl";
 	public String BOOK_LIST_CTL = APP_CONTEXT + "/ctl/BookListCtl";
-
+	
+	public String DESCRIPTION_VIEW = PAGE_FOLDER + "/DescriptionView.jsp";
+	public String DESCRIPTION_LIST_VIEW = PAGE_FOLDER + "/DescriptionListView.jsp";
+	public String DESCRIPTION_CTL = APP_CONTEXT + "/ctl/DescriptionCtl";
+	public String DESCRIPTION_LIST_CTL = APP_CONTEXT + "/ctl/DescriptionListCtl";
+	public String DESCRIPTION_REPORT_CTL = APP_CONTEXT + "/ctl/DescriptionReportCtl";
+	public String DESCRIPTION_REPORT_VIEW = "/reports/DescriptionListReport.jrxml";
 
 }

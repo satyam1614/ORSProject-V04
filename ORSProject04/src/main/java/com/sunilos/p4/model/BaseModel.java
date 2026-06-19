@@ -123,7 +123,7 @@ public abstract class BaseModel<T extends BaseBean> {
 			rs.close();
 		} catch (Exception e) {
 			log.error("Database Exception..", e);
-			throw new ApplicationException("Exception : Exception in getting User by emailId");
+			throw new ApplicationException("Exception : Exception in getting Unique Column");
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}

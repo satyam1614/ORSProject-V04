@@ -1,8 +1,9 @@
 package com.sunilos.p4.util;
 
-
 import java.util.Properties;
 import java.util.ResourceBundle;
+
+import com.sunilos.p4.exception.ApplicationException;
 
 import jakarta.mail.Message;
 import jakarta.mail.PasswordAuthentication;
@@ -10,8 +11,6 @@ import jakarta.mail.Session;
 import jakarta.mail.Transport;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
-
-import com.sunilos.p4.exception.ApplicationException;
 
 /**
  * Email Utility provides Email Services
@@ -21,14 +20,12 @@ import com.sunilos.p4.exception.ApplicationException;
  * @Copyright (c) Rays Technologies
  * 
  */
-
 public class EmailUtility {
 
 	/**
 	 * Create Resource Bundle to read properties file
 	 */
-	static ResourceBundle rb = ResourceBundle
-			.getBundle("com.sunilos.p4.bundle.system");
+	static ResourceBundle rb = ResourceBundle.getBundle("com.sunilos.p4.bundle.system");
 
 	/**
 	 * Email Server
@@ -77,23 +74,19 @@ public class EmailUtility {
 	/**
 	 * Sends an Email
 	 * 
-	 * @param emailMessageDTO
-	 *            : Email message
+	 * @param emailMessageDTO : Email message
 	 * @throws ApplicationException
 	 */
-	public static void sendMail(EmailMessage emailMessageDTO)
-			throws ApplicationException {
+	public static void sendMail(EmailMessage emailMessageDTO) throws ApplicationException {
 
 		try {
 
 			// Connection to Mail Server
-			Session session = Session.getDefaultInstance(props,
-					new jakarta.mail.Authenticator() {
-						protected PasswordAuthentication getPasswordAuthentication() {
-							return new PasswordAuthentication(emailFromAddress,
-									emailPassword);
-						}
-					});
+			Session session = Session.getDefaultInstance(props, new jakarta.mail.Authenticator() {
+				protected PasswordAuthentication getPasswordAuthentication() {
+					return new PasswordAuthentication(emailFromAddress, emailPassword);
+				}
+			});
 
 			// Make debug mode true to display debug messages at console
 			session.setDebug(true);
