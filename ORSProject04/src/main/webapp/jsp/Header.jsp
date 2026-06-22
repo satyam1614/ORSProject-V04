@@ -314,7 +314,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 					</ul></li>
 
 				<!-- ---- Modules: --------------->
-				<!-- ----------- -- ATMSystem  (Admin only) ---- -->
+				<!-- ----------- -- ATMSystem,Mobile,Reward,Delivery,Book  (Admin only) ---- -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
@@ -351,7 +351,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item" href="<%=ORSView.MOBILE_CTL%>">
 								<i class="bi bi-phone me-2 text-success"></i> Add Mobile
 						</a></li>
-						<li><a class="dropdown-item" href="#"> <i
+						<li><a class="dropdown-item" href="<%=ORSView.MOBILE_LIST_CTL%>"> <i
 								class="bi bi-phone me-2 text-primary"></i> Mobile List
 						</a></li>
 
@@ -419,6 +419,25 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.DESCRIPTION_LIST_CTL%>"> <i
 								class="bi bi-file-earmark-text me-2 text-primary"></i>
 								Description List
+						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- Vaccine -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-file-earmark-text me-1"></i> Vaccine
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.VACCINE_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-success"></i> Add
+								Vaccine
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.VACCINE_LIST_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-primary"></i>
+								Vaccine List
 						</a></li>
 					</ul></li>
 

@@ -41,7 +41,6 @@ public interface ORSView {
 	public String MY_PROFILE_VIEW = PAGE_FOLDER + "/MyProfileView.jsp";
 	public String FORGET_PASSWORD_VIEW = PAGE_FOLDER + "/ForgetPasswordView.jsp";
 	public String MARKSHEET_MERIT_LIST_VIEW = PAGE_FOLDER + "/MarksheetMeritListView.jsp";
-	public String MOBILE_VIEW = PAGE_FOLDER + "/MobileView.jsp";
 	public String REWARD_VIEW = PAGE_FOLDER + "/RewardView.jsp";
 	
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
@@ -84,7 +83,7 @@ public interface ORSView {
 	public String MARKSHEET_REPORT_CTL = APP_CONTEXT + "/ctl/MarksheetReportCtl";
 	public String FACULTY_REPORT_CTL = APP_CONTEXT + "/ctl/FacultyReportCtl";
 	
-	public String MOBILE_CTL = APP_CONTEXT + "/ctl/MobileCtl";
+	
 	public String REWARD_CTL = APP_CONTEXT + "/ctl/RewardCtl";
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
@@ -122,5 +121,19 @@ public interface ORSView {
 	public String DESCRIPTION_LIST_CTL = APP_CONTEXT + "/ctl/DescriptionListCtl";
 	public String DESCRIPTION_REPORT_CTL = APP_CONTEXT + "/ctl/DescriptionReportCtl";
 	public String DESCRIPTION_REPORT_VIEW = "/reports/DescriptionListReport.jrxml";
+	
+	public String MOBILE_VIEW = PAGE_FOLDER + "/MobileView.jsp";
+	public String MOBILE_LIST_VIEW = PAGE_FOLDER + "/MobileListView.jsp";
+	public String MOBILE_CTL = APP_CONTEXT + "/ctl/MobileCtl";
+	public String MOBILE_LIST_CTL = APP_CONTEXT + "/ctl/MobileListCtl";
+	public String MOBILE_REPORT_CTL = APP_CONTEXT + "/ctl/MobileReportCtl";
+	public String MOBILE_REPORT_VIEW = "/reports/MobileListReport.jrxml";
+	
+	public String VACCINE_VIEW = PAGE_FOLDER + "/VaccineView.jsp";
+	public String VACCINE_LIST_VIEW = PAGE_FOLDER + "/VaccineListView.jsp";
+	public String VACCINE_CTL = APP_CONTEXT + "/ctl/VaccineCtl";
+	public String VACCINE_LIST_CTL = APP_CONTEXT + "/ctl/VaccineListCtl";
+	public String VACCINE_REPORT_CTL = APP_CONTEXT + "/ctl/VaccineReportCtl";
+	public String VACCINE_REPORT_VIEW = "/reports/VaccineListReport.jrxml";
 
 }
