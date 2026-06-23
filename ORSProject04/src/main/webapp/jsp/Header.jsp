@@ -426,18 +426,37 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- Vaccine -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-file-earmark-text me-1"></i> Vaccine
+								<i class="bi bi-virus me-1"></i> Vaccine
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.VACCINE_CTL%>"> <i
-								class="bi bi-file-earmark-text me-2 text-success"></i> Add
+								class="bi bi-virus me-2 text-success"></i> Add
 								Vaccine
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.VACCINE_LIST_CTL%>"> <i
-								class="bi bi-file-earmark-text me-2 text-primary"></i>
+								class="bi bi-virus me-2 text-primary"></i>
 								Vaccine List
+						</a></li>
+						
+							<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- Report -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-clipboard-data me-1"></i> Report
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.REPORT_CTL%>"> <i
+								class="bi bi-clipboard-data me-2 text-success"></i> Add
+								Report
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.REPORT_LIST_CTL%>"> <i
+								class="bi bi-clipboard-data me-2 text-primary"></i>
+								Report List
 						</a></li>
 					</ul></li>
 

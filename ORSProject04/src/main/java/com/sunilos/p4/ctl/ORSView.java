@@ -135,5 +135,12 @@ public interface ORSView {
 	public String VACCINE_LIST_CTL = APP_CONTEXT + "/ctl/VaccineListCtl";
 	public String VACCINE_REPORT_CTL = APP_CONTEXT + "/ctl/VaccineReportCtl";
 	public String VACCINE_REPORT_VIEW = "/reports/VaccineListReport.jrxml";
+	
+	public String REPORT_VIEW = PAGE_FOLDER + "/ReportView.jsp";
+	public String REPORT_LIST_VIEW = PAGE_FOLDER + "/ReportListView.jsp";
+	public String REPORT_CTL = APP_CONTEXT + "/ctl/ReportCtl";
+	public String REPORT_LIST_CTL = APP_CONTEXT + "/ctl/ReportListCtl";
+	public String REPORT_REPORT_CTL = APP_CONTEXT + "/ctl/ReportReportCtl";
+	public String REPORT_REPORT_VIEW = "/reports/ReportListReport.jrxml";
 
 }

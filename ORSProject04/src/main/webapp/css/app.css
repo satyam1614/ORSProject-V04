@@ -78,6 +78,14 @@ h1, h2, h3 {
 	z-index: 200;
 }
 
+@media ( max-width : 991px) {
+	#mainNav {
+		background: linear-gradient(green, white, orange);
+		padding: 10px;
+		border-radius: 0 0 10px 10px;
+	}
+}
+
 .navbar-brand {
 	display: flex;
 	align-items: center;

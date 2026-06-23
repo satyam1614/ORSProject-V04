@@ -19,7 +19,7 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		<div
 			class="flex-shrink-0 rounded-circle d-flex align-items-center justify-content-center"
 			style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.15); border: 2px solid rgba(255, 255, 255, 0.25); font-size: 2.3rem;">
-			<i class="bi bi-motarboard-fill"></i>
+			<i class="bi bi-mortarboard-fill"></i>
 		</div>
 		<div>
 			<h1 class="fw-bold mb-1 fs-2">
