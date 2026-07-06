@@ -458,6 +458,25 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								class="bi bi-clipboard-data me-2 text-primary"></i>
 								Report List
 						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- LabTest -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-clipboard-data me-1"></i> LabTest
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.LABTEST_CTL%>"> <i
+								class="bi bi-clipboard-data me-2 text-success"></i> Add
+								LabTest
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.LABTEST_LIST_CTL%>"> <i
+								class="bi bi-clipboard-data me-2 text-primary"></i>
+								LabTest List
+						</a></li>
 					</ul></li>
 
 				<%

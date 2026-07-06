@@ -1,5 +1,4 @@
-<%@page import="com.sunilos.p4.util.MessageSource"%>
-<%@page import="com.sunilos.p4.bean.DescriptionBean"%>
+<%@page import="com.sunilos.p4.bean.LabTestBean"%>
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.util.ServletUtility"%>
@@ -7,12 +6,11 @@
 <%@page import="java.util.Iterator"%>
 
 <%
-MessageSource ms = MessageSource.getInstance();
 int pageNo = ServletUtility.getPageNo(request);
 int pageSize = ServletUtility.getPageSize(request);
 int index = ((pageNo - 1) * pageSize) + 1;
 List list = ServletUtility.getList(request);
-Iterator<DescriptionBean> it = list.iterator();
+Iterator<LabTestBean> it = list.iterator();
 String _err = ServletUtility.getErrorMessage(request);
 %>
 
@@ -23,42 +21,42 @@ String _err = ServletUtility.getErrorMessage(request);
 			class="card-header text-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-cart me-2"></i> <%=ms.get("description.list.title") %>
+				<i class="bi bi-cart me-2"></i> LabTest List
 			</h5>
 			<div class="d-flex gap-2">
-				<a href="<%=ORSView.DESCRIPTION_REPORT_CTL%>" target="_blank"
+				<a href="<%=ORSView.LABTEST_REPORT_CTL%>" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
-				</a> <a href="<%=ORSView.DESCRIPTION_REPORT_CTL%>?type=doc" target="_blank"
+				</a> <a href="<%=ORSView.LABTEST_REPORT_CTL%>?type=doc" target="_blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
-				</a> <a href="<%=ORSView.DESCRIPTION_CTL%>"
+				</a> <a href="<%=ORSView.LABTEST_CTL%>"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-cart me-1"></i> <%=ms.get("description.add") %>
+					class="bi bi-cart me-1"></i> Add LabTest
 				</a>
 			</div>
 		</div>
 
-		<form action="<%=ORSView.DESCRIPTION_LIST_CTL%>" method="POST">
+		<form action="<%=ORSView.LABTEST_LIST_CTL%>" method="POST">
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
 
 			<div
 				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center">
-				<input type="text" name="moduleName"
+				<input type="text" name="type"
 					class="form-control form-control-sm" style="max-width: 220px;"
-					placeholder="<%=ms.get("desc.serchname") %>"
-					value="<%=ServletUtility.getParameter("moduleName", request)%>">
+					placeholder="Search by Type"
+					value="<%=ServletUtility.getParameter("type", request)%>">
 				
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
-					<i class="bi bi-search me-1"></i> <%=ms.get("button.search") %>
+					<i class="bi bi-search me-1"></i> Search
 				</button>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto"
 					>
-					<i class="bi bi-trash me-1"></i> <%=ms.get("button.delete.selected") %>
+					<i class="bi bi-trash me-1"></i> Delete Selected
 				</button>
 			</div>
 
@@ -78,29 +76,27 @@ String _err = ServletUtility.getErrorMessage(request);
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
 							<th>S No.</th>
-							<th><%=ms.get("description.module.name") %></th>
-							<th><%=ms.get("description.technology") %></th>
-							<th><%=ms.get("description.developer.name") %></th>
-							<th><%=ms.get("description.status") %></th>
-							<th><%=ms.get("description.exit") %></th>
+							<th>Name</th>
+							<th>Cost</th>
+							<th>TestDate</th>
+							<th>Edit</th>
 						</tr>
 					</thead>
 					<tbody>
 						<%
 						while (it.hasNext()) {
-							DescriptionBean bean = it.next();
+							LabTestBean bean = it.next();
 						%>
 						<tr>
 							<td><input type="checkbox" name="ids"
 								value="<%=bean.getId()%>"></td>
 							<td class="text-muted small"><%=index++%></td>
-							<td class="fw-semibold"><%=bean.getModuleName()%></td>
-							<td><%=bean.getTechnology()%></td>
-							<td><%=bean.getDeveloperName()%></td>
-							<td><%=bean.getStatus()%></td>
-							<td><a href="DescriptionCtl?id=<%=bean.getId()%>"
+							<td class="fw-semibold"><%=bean.getName()%></td>
+							<td><%=bean.getCost()%></td>
+							<td><%=bean.getTestDate()%></td>
+							<td><a href="LabTestCtl?id=<%=bean.getId()%>"
 								class="btn btn-sm btn-outline-primary"> <i
-									class="bi bi-pencil"></i> <%=ms.get("button.edit") %>
+									class="bi bi-pencil"></i> Edit
 							</a></td>
 						</tr>
 						<%

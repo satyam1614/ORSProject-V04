@@ -142,5 +142,13 @@ public interface ORSView {
 	public String REPORT_LIST_CTL = APP_CONTEXT + "/ctl/ReportListCtl";
 	public String REPORT_REPORT_CTL = APP_CONTEXT + "/ctl/ReportReportCtl";
 	public String REPORT_REPORT_VIEW = "/reports/ReportListReport.jrxml";
-
+	
+	public String LABTEST_VIEW = PAGE_FOLDER + "/LabTestView.jsp";
+	public String LABTEST_LIST_VIEW = PAGE_FOLDER + "/LabTestListView.jsp";
+	public String LABTEST_CTL = APP_CONTEXT + "/ctl/LabTestCtl";
+	public String LABTEST_LIST_CTL = APP_CONTEXT + "/ctl/LabTestListCtl";
+	public String LABTEST_REPORT_CTL = APP_CONTEXT + "/ctl/LabTestReportCtl";
+	public String LABTEST_REPORT_VIEW = "/reports/LabTestListReport.jrxml";
+	
+	
 }
