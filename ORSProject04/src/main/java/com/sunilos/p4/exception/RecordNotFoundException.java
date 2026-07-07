@@ -3,7 +3,7 @@ package com.sunilos.p4.exception;
 /**
  * RecordNotFoundException thrown when a record not found occurred
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  * 

@@ -20,7 +20,7 @@ import com.sunilos.p4.util.ServletUtility;
  * * User functionality Controller. Performs operation for add, update and get
  * User
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

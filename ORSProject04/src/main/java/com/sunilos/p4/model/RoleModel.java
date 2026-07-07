@@ -15,7 +15,7 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of Role Model
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  */
@@ -30,7 +30,6 @@ public class RoleModel extends BaseModel<RoleBean> {
 	 * @return bean
 	 * @throws DatabaseException
 	 */
-
 	public RoleBean findByName(String name) throws ApplicationException {
 		return findByUniqueColumn("NAME", name);
 	}

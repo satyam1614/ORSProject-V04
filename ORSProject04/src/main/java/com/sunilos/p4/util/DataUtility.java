@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * Data Utility class to format data from one format to another
  *
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

@@ -10,7 +10,7 @@ import com.sunilos.p4.exception.DatabaseException;
 /**
  * JDBC DataSource is a Data Connection Pool
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  * 

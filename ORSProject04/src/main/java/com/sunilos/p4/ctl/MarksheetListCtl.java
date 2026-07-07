@@ -13,7 +13,7 @@ import com.sunilos.p4.util.DataUtility;
  * Marksheet List functionality Controller. Performs operation for list, search
  * and delete operations of Marksheet
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

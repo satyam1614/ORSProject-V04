@@ -22,7 +22,7 @@ import com.sunilos.p4.util.ServletUtility;
  * My Profile functionality Controller. Performs operation for update your
  * Profile
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

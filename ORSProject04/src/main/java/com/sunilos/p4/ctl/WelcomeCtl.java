@@ -9,7 +9,7 @@ import com.sunilos.p4.model.BaseModel;
 /**
  * Welcome functionality Controller. Performs operation for Show Welcome page
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

@@ -1,7 +1,6 @@
 package com.sunilos.p4.ctl;
 
 import com.sunilos.p4.bean.DescriptionBean;
-import com.sunilos.p4.bean.ProductBean;
 import com.sunilos.p4.model.DescriptionModel;
 import com.sunilos.p4.util.DataUtility;
 import com.sunilos.p4.util.DataValidator;
@@ -9,9 +8,23 @@ import com.sunilos.p4.util.PropertyReader;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
+
+/**
+ * It is an Description Controller which contains validation, populate bean, get
+ * view without operation, get view with operation
+ * 
+ * In this class i used base concept by help of extending basectl java class
+ * with the genrics
+ * 
+ * @author Satyam Yadav
+ */
 @WebServlet("/ctl/DescriptionCtl")
 public class DescriptionCtl extends BaseCtl<DescriptionBean, DescriptionModel> {
-	
+
+	/**
+	 * In validate method i use until class of data validator,
+	 * Which validates the input data provided by the user.
+	 */
 	@Override
 	protected boolean validate(HttpServletRequest request) {
 
@@ -62,9 +75,9 @@ public class DescriptionCtl extends BaseCtl<DescriptionBean, DescriptionModel> {
 
 	@Override
 	protected String getView(String op) {
-	if (OP_CANCEL.equalsIgnoreCase(op)) {
-		return ORSView.DESCRIPTION_LIST_CTL;
-	}
+		if (OP_CANCEL.equalsIgnoreCase(op)) {
+			return ORSView.DESCRIPTION_LIST_CTL;
+		}
 		return ORSView.DESCRIPTION_VIEW;
 	}
 

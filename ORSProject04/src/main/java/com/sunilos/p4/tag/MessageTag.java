@@ -11,7 +11,7 @@ import com.sunilos.p4.util.MessageSource;
  * 
  * <ors:message key="key" />
  * 
- * @author Sunil Sahu
+ * @author Satyam Yadav
  *
  */
 public class MessageTag extends TagSupport {

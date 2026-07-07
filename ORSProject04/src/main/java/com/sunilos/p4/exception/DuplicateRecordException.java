@@ -3,7 +3,7 @@ package com.sunilos.p4.exception;
 /**
  * DuplicateRecordException thrown when a duplicate record occurred
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  * 

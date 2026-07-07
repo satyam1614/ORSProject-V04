@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Class that build Application Email messages
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  * 
@@ -24,8 +24,8 @@ import java.util.HashMap;
 
 
 		msg.append("<HTML><BODY>");
-		msg.append("Registration is successful for ORS Project Rays Technologies");
-		msg.append("<H1>Hi! Greetings from Rays Technologies!</H1>");
+		msg.append("Registration is successful for ORS Project Satyam Yadav");
+		msg.append("<H1>Hi! Greetings from Satyam Yadav!</H1>");
 		msg.append("<P>Congratulations for registering on ORS! You can now access your ORS account online - anywhere, anytime and enjoy the flexibility to check the Marksheet Details.</P>");
 		msg.append("<P>Log in today at <a href='http://ors.sunraystechnologies.com'>http://ors.sunraystechnologies.com</a> with your following credentials:</P>");
 		msg.append("<P><B>Login Id : " + map.get("login") + "<BR>"

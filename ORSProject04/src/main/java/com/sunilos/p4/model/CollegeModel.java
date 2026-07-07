@@ -14,7 +14,7 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of CollegeModel
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  */

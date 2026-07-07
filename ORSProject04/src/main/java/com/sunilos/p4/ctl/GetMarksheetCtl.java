@@ -19,7 +19,7 @@ import com.sunilos.p4.util.ServletUtility;
 /**
  * Get marksheet by given roll number
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */

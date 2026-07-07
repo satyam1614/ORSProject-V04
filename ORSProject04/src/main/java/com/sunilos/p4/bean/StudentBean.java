@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Student JavaBean encapsulates Student attributes
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  * 

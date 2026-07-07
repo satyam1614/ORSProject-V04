@@ -23,7 +23,7 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of UserModel
  * 
- * @author Rays Technologies
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays Technologies
  */
@@ -349,7 +349,7 @@ public class UserModel extends BaseModel<UserBean> {
 		EmailMessage msg = new EmailMessage();
 
 		msg.setTo(bean.getLogin());
-		msg.setSubject("Registration is successful for ORS Project Rays Technologies");
+		msg.setSubject("Registration is successful for ORS Project Satyam Yadav");
 		msg.setMessage(message);
 		msg.setMessageType(EmailMessage.HTML_MSG);
 		EmailUtility.sendMail(msg);

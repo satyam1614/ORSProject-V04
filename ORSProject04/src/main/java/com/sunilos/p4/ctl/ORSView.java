@@ -3,7 +3,7 @@ package com.sunilos.p4.ctl;
 /**
  * Contains ORS View and Controller URI
  * 
- * @author Rays EdTech
+ * @author Satyam Yadav
  * @version 1.0
  * @Copyright (c) Rays EdTech
  */
