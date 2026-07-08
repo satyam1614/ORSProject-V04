@@ -45,6 +45,8 @@ public class UserListCtl extends BaseListCtl<UserBean, UserModel> {
 		bean.setGender(DataUtility.getString(request.getParameter("gender")));
 
 		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
+		
+//		bean.setPhoto(DataUtility.getString(request.getParameter("photo")));
 
 		return bean;
 	}

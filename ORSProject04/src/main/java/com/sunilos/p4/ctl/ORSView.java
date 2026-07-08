@@ -68,6 +68,7 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
+	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/uploadphoto";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
@@ -100,20 +101,7 @@ public interface ORSView {
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
 	
-	public String DELIVERY_VIEW = PAGE_FOLDER + "/DeliveryView.jsp";
-	public String DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DeliveryListView.jsp";
-	public String DELIVERY_CTL = APP_CONTEXT + "/ctl/DeliveryCtl";
-	public String DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DeliveryListCtl";
 	
-	public String ATMSYSTEM_VIEW = PAGE_FOLDER + "/ATMSystemView.jsp";
-	public String ATMSYSTEM_LIST_VIEW = PAGE_FOLDER + "/ATMSystemListView.jsp";
-	public String ATMSYSTEM_CTL = APP_CONTEXT + "/ctl/ATMSystemCtl";
-	public String ATMSYSTEM_LIST_CTL = APP_CONTEXT + "/ctl/ATMSystemListCtl";
-	
-	public String BOOK_VIEW = PAGE_FOLDER + "/BookView.jsp";
-	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
-	public String BOOK_CTL = APP_CONTEXT + "/ctl/BookCtl";
-	public String BOOK_LIST_CTL = APP_CONTEXT + "/ctl/BookListCtl";
 	
 	public String DESCRIPTION_VIEW = PAGE_FOLDER + "/DescriptionView.jsp";
 	public String DESCRIPTION_LIST_VIEW = PAGE_FOLDER + "/DescriptionListView.jsp";
@@ -122,33 +110,6 @@ public interface ORSView {
 	public String DESCRIPTION_REPORT_CTL = APP_CONTEXT + "/ctl/DescriptionReportCtl";
 	public String DESCRIPTION_REPORT_VIEW = "/reports/DescriptionListReport.jrxml";
 	
-	public String MOBILE_VIEW = PAGE_FOLDER + "/MobileView.jsp";
-	public String MOBILE_LIST_VIEW = PAGE_FOLDER + "/MobileListView.jsp";
-	public String MOBILE_CTL = APP_CONTEXT + "/ctl/MobileCtl";
-	public String MOBILE_LIST_CTL = APP_CONTEXT + "/ctl/MobileListCtl";
-	public String MOBILE_REPORT_CTL = APP_CONTEXT + "/ctl/MobileReportCtl";
-	public String MOBILE_REPORT_VIEW = "/reports/MobileListReport.jrxml";
-	
-	public String VACCINE_VIEW = PAGE_FOLDER + "/VaccineView.jsp";
-	public String VACCINE_LIST_VIEW = PAGE_FOLDER + "/VaccineListView.jsp";
-	public String VACCINE_CTL = APP_CONTEXT + "/ctl/VaccineCtl";
-	public String VACCINE_LIST_CTL = APP_CONTEXT + "/ctl/VaccineListCtl";
-	public String VACCINE_REPORT_CTL = APP_CONTEXT + "/ctl/VaccineReportCtl";
-	public String VACCINE_REPORT_VIEW = "/reports/VaccineListReport.jrxml";
-	
-	public String REPORT_VIEW = PAGE_FOLDER + "/ReportView.jsp";
-	public String REPORT_LIST_VIEW = PAGE_FOLDER + "/ReportListView.jsp";
-	public String REPORT_CTL = APP_CONTEXT + "/ctl/ReportCtl";
-	public String REPORT_LIST_CTL = APP_CONTEXT + "/ctl/ReportListCtl";
-	public String REPORT_REPORT_CTL = APP_CONTEXT + "/ctl/ReportReportCtl";
-	public String REPORT_REPORT_VIEW = "/reports/ReportListReport.jrxml";
-	
-	public String LABTEST_VIEW = PAGE_FOLDER + "/LabTestView.jsp";
-	public String LABTEST_LIST_VIEW = PAGE_FOLDER + "/LabTestListView.jsp";
-	public String LABTEST_CTL = APP_CONTEXT + "/ctl/LabTestCtl";
-	public String LABTEST_LIST_CTL = APP_CONTEXT + "/ctl/LabTestListCtl";
-	public String LABTEST_REPORT_CTL = APP_CONTEXT + "/ctl/LabTestReportCtl";
-	public String LABTEST_REPORT_VIEW = "/reports/LabTestListReport.jrxml";
 	
 	
 }

@@ -54,8 +54,31 @@ genderMap.put("F", "Female");
 			<%
 			}
 			%>
+			<%
+			if (bean.getId() > 0) {
+			%>
+			<div class="d-flex align-items-center gap-3 mb-4">
+				<img src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=bean.getId()%>"
+					onerror="this.style.display='none';" alt="User Photo"
+					class="rounded-circle border" width="80" height="80"
+					style="object-fit: cover;">
+				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
+					enctype="multipart/form-data"
+					class="d-flex align-items-center gap-2">
+					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
+						type="file" name="photo" class="form-control form-control-sm"
+						accept="image/*">
+					<button type="submit"
+						class="btn btn-sm btn-outline-primary text-nowrap">
+						<i class="bi bi-upload me-1"></i> Upload Photo
+					</button>
+				</form>
+			</div>
+			<%
+			}
+			%>
 
-			<form action="<%=ORSView.USER_CTL%>" method="POST">
+			<form name="userForm" action="<%=ORSView.USER_CTL%>" method="POST">
 				<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 					type="hidden" name="createdBy" value="<%=bean.getCreatedBy()%>">
 				<input type="hidden" name="modifiedBy"
@@ -125,10 +148,11 @@ genderMap.put("F", "Female");
 					<label class="form-label fw-semibold">Date of Birth
 						(mm/dd/yyyy)</label>
 					<div class="input-group">
-						<input type="text" name="dob" id="udate" class="form-control" placeholder="Select date of birth"
-							readonly value="<%=DataUtility.getDateString(bean.getDob())%>">
-						<a class="btn btn-outline-secondary"> <img
-							src="../img/cal.jpg" width="16" height="15" alt="Calendar">
+						<input type="text" name="dob" id="udate" class="form-control"
+							placeholder="Select date of birth" readonly
+							value="<%=DataUtility.getDateString(bean.getDob())%>"> <a
+							class="btn btn-outline-secondary"> <img src="../img/cal.jpg"
+							width="16" height="15" alt="Calendar">
 						</a>
 					</div>
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("dob", request)%></div>
