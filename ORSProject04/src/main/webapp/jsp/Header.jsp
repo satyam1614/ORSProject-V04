@@ -345,6 +345,27 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
+						<!-- AI Recommendation -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-file-earmark-text me-1"></i> AI Recommendation
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AIRECOMMENDATION_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-success"></i> Add AI
+								Recommendation
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AIRECOMMENDATION_LIST_CTL%>"> <i
+								class="bi bi-file-earmark-text me-2 text-primary"></i> AI
+								Recommendation List
+						</a></li>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
+
+
 					</ul></li>
 
 				<%

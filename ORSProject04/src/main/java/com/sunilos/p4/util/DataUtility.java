@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
 
 /**
@@ -79,6 +80,18 @@ public class DataUtility {
 	/**
 	 * Parses a date string (MM/dd/yyyy) into a Date
 	 */
+//	public static LocalDate getDate(String val) {
+//		if (val == null || val.isBlank()) {
+//			return null;
+//		}
+//
+//		try {
+//			return LocalDate.parse(val.trim(), DATE_FMT);
+//		} catch (DateTimeParseException ex) {
+//			return null;
+//		}
+//	}
+
 	public static Date getDate(String val) {
 		try {
 			LocalDate ld = LocalDate.parse(val, DATE_FMT);
@@ -87,7 +100,7 @@ public class DataUtility {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Formats a Date into a String (MM/dd/yyyy)
 	 */

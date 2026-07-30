@@ -27,14 +27,14 @@ public class TestProductModel {
 		ProductBean bean = new ProductBean();
 		ProductModel model = new ProductModel();
 		
-		bean.setProductName("satyam");
-		bean.setProductCategory("yadav");
-		bean.setOrderDate(DataUtility.getDate("03/04/2004"));
-		bean.setPrice(500);
-		bean.setCreatedBy("root");
-		bean.setModifiedBy("root");
-		bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
-		bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
+//		bean.setProductName("satyam");
+//		bean.setProductCategory("yadav");
+//		bean.setOrderDate(DataUtility.getDate("03/04/2004"));
+//		bean.setPrice(500);
+//		bean.setCreatedBy("root");
+//		bean.setModifiedBy("root");
+//		bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
+//		bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
 
 		model.add(bean);
 		

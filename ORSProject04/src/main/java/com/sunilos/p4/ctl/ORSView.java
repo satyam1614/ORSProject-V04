@@ -110,6 +110,11 @@ public interface ORSView {
 	public String DESCRIPTION_REPORT_CTL = APP_CONTEXT + "/ctl/DescriptionReportCtl";
 	public String DESCRIPTION_REPORT_VIEW = "/reports/DescriptionListReport.jrxml";
 	
-	
+	public String AIRECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
+	public String AIRECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
+	public String AIRECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
+	public String AIRECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
+	public String AIRECOMMENDATION_REPORT_CTL = APP_CONTEXT + "/ctl/AIRecommendationReportCtl";
+	public String AIRECOMMENDATION_REPORT_VIEW = "/reports/AIRecommendationListReport.jrxml";
 	
 }
